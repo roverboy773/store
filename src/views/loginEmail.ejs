@@ -1,0 +1,45 @@
+<section class="loginEmail md:flex items-center justify-center mt-20 h-full">
+  <div>
+     <img class=" md:w-2/3" src="/img/login.svg" alt="">
+  </div>
+    <div class="w-full md:w-1/2 bg-white shadow-xl md:mr-12 py-8 px-6 rounded-2xl">
+      <h3 class="text-lg font-bold ">Welcome!</h3>
+      <h2 class="text-lg font-bold text-gray-300">Login to continue</h2>
+        <form action="/login" method="POST" class="py-4">
+           <% if(messages.message) { %>
+             <span class="text-red-500 rext-sm"><%=messages.message %></span>
+          <%}%>
+          <div class="mb-4 relative ">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+              Email
+            </label>
+            
+              <input name="email" 
+              class="w-full text-gray-700 outline-none bg-transparent"
+              id="username" type="email" placeholder="Username">
+              <div class="Border"></div>
+          </div>
+
+          <div class="mb-6 relative">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+              Password
+            </label>
+            
+              <input name="password"
+              class="w-full text-gray-700 outline-none bg-transparent"
+              id="password" type="password" placeholder="******">
+              <div class="Border"></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit">
+              Sign In
+            </button>
+            <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="/register">
+              Don't have account?
+            </a>
+          </div>
+        </form>
+        
+      </div>
+</section>
